@@ -1,5 +1,5 @@
-name: booyah_nexus_x
-description: Booyah Nexus X
+name: quick_pay_x
+description: Quick Pay X - Wallet + Scanner + Password Lock
 publish_to: 'none'
 version: 1.0.0+1
 environment:
@@ -7,5 +7,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.2
 flutter:
   uses-material-design: true
