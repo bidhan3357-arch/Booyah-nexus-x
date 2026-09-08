@@ -11,7 +11,7 @@ jobs:
           channel: 'stable'
       - run: flutter config --no-analytics
       - run: rm -rf android
-      - run: flutter create --platforms=android .
+      - run: flutter create --platforms=android --project-name booyah_nexus_x .
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
