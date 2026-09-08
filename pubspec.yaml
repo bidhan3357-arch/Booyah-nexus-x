@@ -1,5 +1,5 @@
 name: quick_pay_x
-description: Quick Pay X - Wallet + Scanner + Password Lock
+description: Quick Pay X - Wallet App
 publish_to: 'none'
 version: 1.0.0+1
 environment:
