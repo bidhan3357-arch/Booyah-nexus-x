@@ -1,48 +1,57 @@
 import 'package:flutter/material.dart';
 
-void main() { runApp(BooyahNexusX()); }
+void main() {
+  runApp(const BooyahNexusApp());
+}
 
-class BooyahNexusX extends StatelessWidget {
+class BooyahNexusApp extends StatelessWidget {
+  const BooyahNexusApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Booyah Nexus X',
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: Color(0xFF0F0F0F)),
-      home: HomeScreen(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: const Color(0xFFFFD700),
+        scaffoldBackgroundColor: const Color(0xFF0A0A0A),
+      ),
+      home: const HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('BOOYAH NEXUS X'), backgroundColor: Colors.deepPurple, centerTitle: true),
+      appBar: AppBar(
+        title: const Text('BOOYAH NEXUS X', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFFFFD700))),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.sports_esports, size: 100, color: Colors.deepPurpleAccent),
-            SizedBox(height: 20),
-            Text('BOOYAH NEXUS X', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-            SizedBox(height: 10),
-            Text('Free Fire Pro Tools', style: TextStyle(color: Colors.grey)),
-            SizedBox(height: 40),
+            const Icon(Icons.sports_esports, size: 100, color: Color(0xFFFFD700)),
+            const SizedBox(height: 20),
+            const Text('Welcome to Booyah Nexus X', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 10),
+            const Text('Tournament App Ready!', style: TextStyle(color: Colors.grey)),
+            const SizedBox(height: 30),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple, padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15)),
-              onPressed: (){},
-              child: Text('GET SENSITIVITY'),
-            ),
-            SizedBox(height: 15),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange, padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15)),
-              onPressed: (){},
-              child: Text('CHECK STATS'),
-            ),
+              style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFFD700), foregroundColor: Colors.black),
+              onPressed: () {},
+              child: const Text('ENTER TOURNAMENT'),
+            )
           ],
         ),
       ),
     );
   }
 }
+        
