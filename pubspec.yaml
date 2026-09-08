@@ -1,12 +1,16 @@
 name: quick_pay_x
-description: Quick Pay X - Wallet App
+description: QUICK PAY X - Wallet App
 publish_to: 'none'
 version: 1.0.0+1
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 dependencies:
   flutter:
     sdk: flutter
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.2.0
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.2.5
   cupertino_icons: ^1.0.2
 flutter:
   uses-material-design: true
